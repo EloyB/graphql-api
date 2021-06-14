@@ -1,0 +1,23 @@
+type Company implements Timestamps {
+  id: ID!
+  name: String!
+  vatNumber: Int!
+  address: String!
+  country: String!
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+input CreateCompanyInput {
+  name: String!
+  vatNumber: Int!
+  address: String!
+  country: String!
+}
+
+input UpdateCompanyInput {
+  name: String
+  vatNumber: Int
+  address: String
+  country: String
+}

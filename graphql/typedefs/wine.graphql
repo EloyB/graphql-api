@@ -1,0 +1,15 @@
+type Wine implements Timestamps {
+  id: ID!
+  name: String!
+  vineyard: Vineyard
+  categories: [Category]
+  price: Float!
+  description: String!
+  discount: Int
+  imageUrl: String!
+  rating: Float!
+  grape: Grape
+  available: Boolean!
+  createdAt: Date!
+  updatedAt: Date!
+}

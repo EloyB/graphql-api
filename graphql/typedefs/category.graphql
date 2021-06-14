@@ -1,0 +1,6 @@
+type Category implements Timestamps {
+  id: ID!
+  name: String!
+  createdAt: Date!
+  updatedAt: Date!
+}

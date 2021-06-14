@@ -1,0 +1,7 @@
+type Order implements Timestamps {
+  id: ID!
+  items: [Wine]!
+  user: User!
+  createdAt: Date!
+  updatedAt: Date!
+}

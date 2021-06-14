@@ -1,0 +1,29 @@
+type User implements Timestamps {
+  id: ID!
+  email: String!
+  firstName: String!
+  lastName: String!
+  phone: String!
+  shippingAddress: String!
+  gender: String!
+  company: Company
+  password: String!
+  userType: UserType!
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+input SignUpInput {
+  firstName: String!
+  lastName: String!
+  email: String!
+  password: String!
+  repeatPassword: String!
+}
+
+input ChangePasswordInput {
+  email: String!
+  oldPassword: String!
+  newPassword: String!
+  repeatNewPassword: String!
+}

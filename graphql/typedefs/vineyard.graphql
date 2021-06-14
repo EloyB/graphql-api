@@ -1,0 +1,11 @@
+type Vineyard implements Timestamps {
+  id: ID!
+  name: String!
+  country: String!
+  region: String!
+  yearOfIncorporation: Int!
+  topWines: [Wine]
+  story: String!
+  createdAt: Date!
+  updatedAt: Date!
+}

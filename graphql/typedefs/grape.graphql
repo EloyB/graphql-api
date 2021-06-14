@@ -1,0 +1,8 @@
+type Grape implements Timestamps {
+  id: ID!
+  name: String!
+  country: String!
+  region: String!
+  createdAt: Date!
+  updatedAt: Date!
+}

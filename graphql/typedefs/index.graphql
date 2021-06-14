@@ -1,0 +1,14 @@
+scalar Date
+
+type Query {
+  loginUser(userId: ID!): [User]!
+  orderHistory: [Order]
+}
+
+type Mutation {
+  signUpUser(user: SignUpInput!): User!
+  changePassword(user: ChangePasswordInput): User!
+
+  createCompany(company: CreateCompanyInput): Company!
+  updateCompany(company: UpdateCompanyInput): Company!
+}
