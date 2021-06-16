@@ -15,7 +15,7 @@ const seed = async () => {
   console.log("Cleanning database");
 
   await connectDB();
-  //await connection.dropDatabase().catch((e) => console.log("mong: ", e));
+  await connection.dropDatabase();
 
   console.log("Database clean");
 
