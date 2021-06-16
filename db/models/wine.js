@@ -6,7 +6,7 @@ const WineSchema = new Schema(
     vineyard: { type: Schema.Types.ObjectId, ref: "Vineyard", required: true },
     price: { type: Number, required: true },
     description: { type: String, required: true },
-    discount: { type: Number, required: true },
+    discount: { type: Number },
     imageUrl: { type: String, required: true },
     rating: { type: Number, required: true },
     grape: { type: Schema.Types.ObjectId, ref: "Grape", required: true },

@@ -1,4 +1,4 @@
-import { port } from "./config/environment/index";
+import { mongo, port } from "./config/environment/index";
 import app from "./app";
 import connectDB from "./db";
 

@@ -6,3 +6,7 @@ export { default as Category } from "./category";
 export { default as Vineyard } from "./vineyard";
 export { default as Company } from "./company";
 export { default as Wine } from "./wine";
+export { default as WineCategories } from "./winecategories";
+export { default as OrderItems } from "./orderitems";
+
+

@@ -4,3 +4,7 @@ type Category implements Timestamps {
   createdAt: Date!
   updatedAt: Date!
 }
+
+input AddCategoryInput {
+  name: String!
+}

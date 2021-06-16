@@ -3,6 +3,10 @@ scalar Date
 type Query {
   loginUser(userId: ID!): [User]!
   orderHistory: [Order]
+
+  wines: [Wine]!
+
+  categories: [Category]!
 }
 
 type Mutation {
@@ -11,4 +15,8 @@ type Mutation {
 
   createCompany(company: CreateCompanyInput): Company!
   updateCompany(company: UpdateCompanyInput): Company!
+
+  addWine(wine: AddWineInput): Wine!
+
+  addCategory(company: AddCategoryInput): Category!
 }

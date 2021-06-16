@@ -1,10 +1,17 @@
-import { Wine } from "../../../db/models";
+import { Wine, WineCategory } from "../../../db/models";
 
 const wineMutations = {
-  wines: async (_, args) => {
-    const wines = await Wine.find();
+  addWine: async (_, {wine}) => {
+    const newWine = new Wine(wine);
 
-    return wines;
+    if (newWine.categories != null) {
+      for (let i = 0; i < wine.categories.length; i++) {
+        const wineCategory = new WineCategory({wine: wine._id, category: wine.categories[i]._id});
+        await wineCategory.save();
+      }
+    }
+
+    return newWine.save();
   },
 };
 

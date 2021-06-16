@@ -13,3 +13,16 @@ type Wine implements Timestamps {
   createdAt: Date!
   updatedAt: Date!
 }
+
+input AddWineInput {
+  name: String!
+  vineyard: ID!
+  categories: [ID!]
+  price: Float!
+  description: String!
+  discount: Int
+  imageUrl: String!
+  rating: Float!
+  grape: ID!
+  available: Boolean!
+}

@@ -9,6 +9,7 @@ type User implements Timestamps {
   company: Company
   password: String!
   userType: UserType!
+  orders: [Order]
   createdAt: Date!
   updatedAt: Date!
 }

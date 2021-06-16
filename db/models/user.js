@@ -10,7 +10,7 @@ const UserSchema = new Schema(
     gender: { type: String, required: true },
     company: { type: Schema.Types.ObjectId, ref: "Company" },
     password: { type: String, required: true },
-    userType: { type: Schema.Types.ObjectId, ref: "UserType", required: true },
+    userType: { type: Schema.Types.ObjectId, ref: "UserType" },
   },
   {
     timestamps: true,
