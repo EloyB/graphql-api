@@ -1,24 +1,21 @@
 import Mongoose from "mongoose";
 import { mongo } from "../config/environment";
 
-let isConnected;
-let db;
-
 const connectDB = async () => {
-  if (isConnected) return db;
-
-  try {
-    db = await Mongoose.connect(mongo.url, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-      useFindAndModify: false,
+  await Mongoose.connect(mongo.url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  })
+    .then((x) => {
+      console.log(
+        `Connected to Mongo! Database name: "${x.connections[0].name}"`
+      );
+    })
+    .catch((err) => {
+      console.error("Error connecting to mongo", err);
     });
-    isConnected = db.connections[0].readyState;
-    return db;
-  } catch (error) {
-    throw new Error(error);
-  }
 };
 
 export default connectDB;
