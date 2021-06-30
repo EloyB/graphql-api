@@ -1,7 +1,7 @@
 scalar Date
 
 type Query {
-  loginUser(userId: ID!): [User]!
+  token(user: LoginInput!): String!
   orderHistory: [Order]
 
   wines: [Wine]!

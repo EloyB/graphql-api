@@ -14,4 +14,8 @@ const mongo = {
   url: process.env.MONGO_URI,
 };
 
-export { port, env, mongo };
+const secret = {
+  token: process.env.JWT_SECRET_TOKEN,
+};
+
+export { port, env, mongo, secret };

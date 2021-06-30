@@ -3,12 +3,12 @@ type User implements Timestamps {
   email: String!
   firstName: String!
   lastName: String!
-  phone: String!
-  shippingAddress: String!
-  gender: String!
+  phone: String
+  shippingAddress: String
+  gender: String
   company: Company
   password: String!
-  userType: UserType!
+  userType: UserType
   orders: [Order]
   createdAt: Date!
   updatedAt: Date!
@@ -20,6 +20,11 @@ input SignUpInput {
   email: String!
   password: String!
   repeatPassword: String!
+}
+
+input LoginInput {
+  email: String!
+  password: String!
 }
 
 input ChangePasswordInput {
