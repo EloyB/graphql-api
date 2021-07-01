@@ -5,3 +5,8 @@ type Order implements Timestamps {
   createdAt: Date!
   updatedAt: Date!
 }
+
+input CreateOrderInput {
+  items: [Wine]!
+  user: ID!
+}
